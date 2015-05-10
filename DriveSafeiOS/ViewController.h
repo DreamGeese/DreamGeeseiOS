@@ -14,8 +14,11 @@
 
 @property OpenSpatialBluetooth *HIDServ;
 @property CBPeripheral *lastNodPeripheral;
-
+@property NSString *gesture;
+@property (nonatomic, retain) MPMusicPlayerController *musicPlayer;
 -(void) startLoop;
+
+
 
 @end
 

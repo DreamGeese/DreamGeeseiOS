@@ -14,8 +14,11 @@
 @end
 
 @implementation ViewController
+@synthesize musicPlayer;
 
 uint8_t mode = POINTER_MODE;
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,16 +33,8 @@ uint8_t mode = POINTER_MODE;
 {
     self.HIDServ = [OpenSpatialBluetooth sharedBluetoothServ];
     self.HIDServ.delegate = self;
+    musicPlayer = [MPMusicPlayerController iPodMusicPlayer];
     [super viewDidLoad];
-    // instantiate a music player
-    MPMusicPlayerController *myPlayer =
-    [MPMusicPlayerController applicationMusicPlayer];
-    
-    // assign a playback queue containing all media items on the device
-    [myPlayer setQueueWithQuery: [MPMediaQuery songsQuery]];
-    
-    // start playing from the beginning of the queue
-    [myPlayer play];
 }
 
 
@@ -69,33 +64,43 @@ uint8_t mode = POINTER_MODE;
     {
         case TOUCH0_DOWN:
         NSLog(@"Touch 0 Down");
+        _gesture = @"touch0d";
         break;
         case TOUCH0_UP:
         NSLog(@"Touch 0 Up");
+        _gesture = @"touch0u";
         break;
         case TOUCH1_DOWN:
         NSLog(@"Touch 1 Down");
+            _gesture = @"touch1d";
         break;
         case TOUCH1_UP:
         NSLog(@"Touch 1 Up");
+            _gesture = @"touch0u";
         break;
         case TOUCH2_DOWN:
         NSLog(@"Touch 2 Down");
+            _gesture = @"touch2d";
         break;
         case TOUCH2_UP:
         NSLog(@"Touch 2 Up");
+            _gesture = @"touch2u";
         break;
         case TACTILE0_DOWN:
         NSLog(@"Tactile 0 Down");
+            _gesture = @"tactile0d";
         break;
         case TACTILE0_UP:
         NSLog(@"Tactile 0 Up");
+            _gesture = @"tactile0u";
         break;
         case TACTILE1_DOWN:
         NSLog(@"Tactile 1 Down");
+            _gesture = @"tactile1d";
         break;
         case TACTILE1_UP:
         NSLog(@"Tactile 1 Up");
+            _gesture = @"tactile1u";
         break;
     }
 }
@@ -118,27 +123,36 @@ uint8_t mode = POINTER_MODE;
     {
         case SWIPE_UP:
         NSLog(@"Gesture Up");
+            _gesture = @"up";
         break;
         case SWIPE_DOWN:
         NSLog(@"Gesture Down");
+            _gesture = @"down";
         break;
         case SWIPE_LEFT:
         NSLog(@"Gesture Left");
+            _gesture = @"left";
         break;
         case SWIPE_RIGHT:
         NSLog(@"Gesture Right");
+            _gesture = @"right";
         break;
         case SLIDER_LEFT:
         NSLog(@"Slider Left");
+            _gesture = @"slideleft";
         break;
         case SLIDER_RIGHT:
         NSLog(@"Slider Right");
+            _gesture = @"slideright";
+            
         break;
         case CCW:
         NSLog(@"Counter Clockwise");
+            _gesture = @"cc";
         break;
         case CW:
         NSLog(@"Clockwise");
+            _gesture = @"c";
         break;
     }
 }
@@ -183,6 +197,8 @@ uint8_t mode = POINTER_MODE;
         [self.HIDServ subscribeToGestureEvents:name];
         //        [self.HIDServ subscribeToRotationEvents:name];
         //        [self.HIDServ subscribeToMotion6DEvents:name];
+        [self volumeControl:_gesture];
+        
     }
 }
 - (IBAction)quit:(id)sender
@@ -203,6 +219,13 @@ uint8_t mode = POINTER_MODE;
     NSLog(@"Motion 6D Event Fired:: xAccel:%f, yAccel:%f, zAccel:%f, xGyro: %f, yGyro:%f, zGyro:%f",
           motion6DEvent.xAccel, motion6DEvent.yAccel, motion6DEvent.zAccel,
           motion6DEvent.xGyro, motion6DEvent.yGryo, motion6DEvent.zGryo);
+}
+
+-(void) volumeControl:(NSString *) inputgesture
+{
+    if ([inputgesture isEqual: @"cc"]) {
+        [musicPlayer play];
+    }
 }
 
 @end
