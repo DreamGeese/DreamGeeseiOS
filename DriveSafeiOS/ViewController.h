@@ -12,10 +12,13 @@
 
 @interface ViewController : UIViewController <OpenSpatialBluetoothDelegate>
 
+@property (weak, nonatomic) IBOutlet UISlider *volumeSlider;
 @property OpenSpatialBluetooth *HIDServ;
 @property CBPeripheral *lastNodPeripheral;
 @property NSString *gesture;
+@property float *volumeControl;
 @property (nonatomic, retain) MPMusicPlayerController *musicPlayer;
+- (IBAction) changeButtonPressed:(id)sender;
 -(void) startLoop;
 
 

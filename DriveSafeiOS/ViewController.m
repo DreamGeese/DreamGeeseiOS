@@ -97,6 +97,7 @@ uint8_t mode = POINTER_MODE;
         case TACTILE1_DOWN:
         NSLog(@"Tactile 1 Down");
             _gesture = @"tactile1d";
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:16477719615"]];
         break;
         case TACTILE1_UP:
         NSLog(@"Tactile 1 Up");
@@ -119,23 +120,27 @@ uint8_t mode = POINTER_MODE;
 -(void) gestureEventFired: (GestureEvent *) gestureEvent
 {
     NSLog(@"This is the value of gesture event type from %@", [gestureEvent.peripheral name]);
+    _volumeControl=0;
     switch([gestureEvent getGestureEventType])
     {
         case SWIPE_UP:
         NSLog(@"Gesture Up");
-            _gesture = @"up";
+            musicPlayer.volume +=0.1;
         break;
         case SWIPE_DOWN:
         NSLog(@"Gesture Down");
+            musicPlayer.volume -=0.1;
             _gesture = @"down";
         break;
         case SWIPE_LEFT:
         NSLog(@"Gesture Left");
             _gesture = @"left";
+            [musicPlayer skipToPreviousItem];
         break;
         case SWIPE_RIGHT:
         NSLog(@"Gesture Right");
             _gesture = @"right";
+            [musicPlayer skipToNextItem];
         break;
         case SLIDER_LEFT:
         NSLog(@"Slider Left");
@@ -149,11 +154,14 @@ uint8_t mode = POINTER_MODE;
         case CCW:
         NSLog(@"Counter Clockwise");
             _gesture = @"cc";
+            [musicPlayer pause];
         break;
         case CW:
         NSLog(@"Clockwise");
             _gesture = @"c";
+            [musicPlayer play];
         break;
+            
     }
 }
 
@@ -193,7 +201,7 @@ uint8_t mode = POINTER_MODE;
     for(NSString* name in [self.HIDServ.connectedPeripherals allKeys])
     {
         //        [self.HIDServ subscribeToPointerEvents:name];
-        //        [self.HIDServ subscribeToButtonEvents:name];
+        [self.HIDServ subscribeToButtonEvents:name];
         [self.HIDServ subscribeToGestureEvents:name];
         //        [self.HIDServ subscribeToRotationEvents:name];
         //        [self.HIDServ subscribeToMotion6DEvents:name];
@@ -224,6 +232,7 @@ uint8_t mode = POINTER_MODE;
 -(void) volumeControl:(NSString *) inputgesture
 {
     if ([inputgesture isEqual: @"cc"]) {
+        NSLog(@"music");
         [musicPlayer play];
     }
 }

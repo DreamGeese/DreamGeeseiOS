@@ -37,12 +37,18 @@
                                 <state key="normal" title="Start">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3QG-yj-L43"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BS0-zc-MY3">
                                 <rect key="frame" x="285" y="461" width="30" height="30"/>
                                 <state key="normal" title="End">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="quit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FQL-n2-fvW"/>
+                                </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Auj-mV-pAl">
                                 <rect key="frame" x="14" y="526" width="572" height="31"/>
@@ -63,6 +69,9 @@
                             <constraint firstItem="Auj-mV-pAl" firstAttribute="centerX" secondItem="BS0-zc-MY3" secondAttribute="centerX" id="sJx-lt-URc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="volumeSlider" destination="Auj-mV-pAl" id="utq-MZ-b53"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
