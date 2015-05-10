@@ -14,6 +14,14 @@
 		495746D91AFEB0C600E8A172 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 495746D81AFEB0C600E8A172 /* Images.xcassets */; };
 		495746DC1AFEB0C600E8A172 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 495746DA1AFEB0C600E8A172 /* LaunchScreen.xib */; };
 		495746E81AFEB0C600E8A172 /* DriveSafeiOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 495746E71AFEB0C600E8A172 /* DriveSafeiOSTests.m */; };
+		495747001AFEB0E100E8A172 /* ButtonEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 495746F31AFEB0E100E8A172 /* ButtonEvent.m */; };
+		495747011AFEB0E100E8A172 /* GestureEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 495746F51AFEB0E100E8A172 /* GestureEvent.m */; };
+		495747021AFEB0E100E8A172 /* Motion6DEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 495746F71AFEB0E100E8A172 /* Motion6DEvent.m */; };
+		495747031AFEB0E100E8A172 /* OpenSpatialBluetooth.m in Sources */ = {isa = PBXBuildFile; fileRef = 495746F91AFEB0E100E8A172 /* OpenSpatialBluetooth.m */; };
+		495747041AFEB0E100E8A172 /* OpenSpatialDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 495746FB1AFEB0E100E8A172 /* OpenSpatialDecoder.m */; };
+		495747051AFEB0E100E8A172 /* PointerEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 495746FD1AFEB0E100E8A172 /* PointerEvent.m */; };
+		495747061AFEB0E100E8A172 /* RotationEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 495746FF1AFEB0E100E8A172 /* RotationEvent.m */; };
+		495747091AFEB23B00E8A172 /* RingScanTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 495747081AFEB23B00E8A172 /* RingScanTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +48,22 @@
 		495746E11AFEB0C600E8A172 /* DriveSafeiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DriveSafeiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		495746E61AFEB0C600E8A172 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		495746E71AFEB0C600E8A172 /* DriveSafeiOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DriveSafeiOSTests.m; sourceTree = "<group>"; };
+		495746F21AFEB0E100E8A172 /* ButtonEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonEvent.h; sourceTree = "<group>"; };
+		495746F31AFEB0E100E8A172 /* ButtonEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonEvent.m; sourceTree = "<group>"; };
+		495746F41AFEB0E100E8A172 /* GestureEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureEvent.h; sourceTree = "<group>"; };
+		495746F51AFEB0E100E8A172 /* GestureEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureEvent.m; sourceTree = "<group>"; };
+		495746F61AFEB0E100E8A172 /* Motion6DEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Motion6DEvent.h; sourceTree = "<group>"; };
+		495746F71AFEB0E100E8A172 /* Motion6DEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Motion6DEvent.m; sourceTree = "<group>"; };
+		495746F81AFEB0E100E8A172 /* OpenSpatialBluetooth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenSpatialBluetooth.h; sourceTree = "<group>"; };
+		495746F91AFEB0E100E8A172 /* OpenSpatialBluetooth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenSpatialBluetooth.m; sourceTree = "<group>"; };
+		495746FA1AFEB0E100E8A172 /* OpenSpatialDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenSpatialDecoder.h; sourceTree = "<group>"; };
+		495746FB1AFEB0E100E8A172 /* OpenSpatialDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenSpatialDecoder.m; sourceTree = "<group>"; };
+		495746FC1AFEB0E100E8A172 /* PointerEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointerEvent.h; sourceTree = "<group>"; };
+		495746FD1AFEB0E100E8A172 /* PointerEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointerEvent.m; sourceTree = "<group>"; };
+		495746FE1AFEB0E100E8A172 /* RotationEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotationEvent.h; sourceTree = "<group>"; };
+		495746FF1AFEB0E100E8A172 /* RotationEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotationEvent.m; sourceTree = "<group>"; };
+		495747071AFEB23B00E8A172 /* RingScanTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RingScanTableViewController.h; sourceTree = "<group>"; };
+		495747081AFEB23B00E8A172 /* RingScanTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RingScanTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +105,11 @@
 		495746CA1AFEB0C600E8A172 /* DriveSafeiOS */ = {
 			isa = PBXGroup;
 			children = (
+				495746F11AFEB0E100E8A172 /* Open Spatial iOS SDK */,
 				495746CF1AFEB0C600E8A172 /* AppDelegate.h */,
 				495746D01AFEB0C600E8A172 /* AppDelegate.m */,
+				495747071AFEB23B00E8A172 /* RingScanTableViewController.h */,
+				495747081AFEB23B00E8A172 /* RingScanTableViewController.m */,
 				495746D21AFEB0C600E8A172 /* ViewController.h */,
 				495746D31AFEB0C600E8A172 /* ViewController.m */,
 				495746D51AFEB0C600E8A172 /* Main.storyboard */,
@@ -117,6 +144,27 @@
 				495746E61AFEB0C600E8A172 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		495746F11AFEB0E100E8A172 /* Open Spatial iOS SDK */ = {
+			isa = PBXGroup;
+			children = (
+				495746F21AFEB0E100E8A172 /* ButtonEvent.h */,
+				495746F31AFEB0E100E8A172 /* ButtonEvent.m */,
+				495746F41AFEB0E100E8A172 /* GestureEvent.h */,
+				495746F51AFEB0E100E8A172 /* GestureEvent.m */,
+				495746F61AFEB0E100E8A172 /* Motion6DEvent.h */,
+				495746F71AFEB0E100E8A172 /* Motion6DEvent.m */,
+				495746F81AFEB0E100E8A172 /* OpenSpatialBluetooth.h */,
+				495746F91AFEB0E100E8A172 /* OpenSpatialBluetooth.m */,
+				495746FA1AFEB0E100E8A172 /* OpenSpatialDecoder.h */,
+				495746FB1AFEB0E100E8A172 /* OpenSpatialDecoder.m */,
+				495746FC1AFEB0E100E8A172 /* PointerEvent.h */,
+				495746FD1AFEB0E100E8A172 /* PointerEvent.m */,
+				495746FE1AFEB0E100E8A172 /* RotationEvent.h */,
+				495746FF1AFEB0E100E8A172 /* RotationEvent.m */,
+			);
+			path = "Open Spatial iOS SDK";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +269,14 @@
 			files = (
 				495746D41AFEB0C600E8A172 /* ViewController.m in Sources */,
 				495746D11AFEB0C600E8A172 /* AppDelegate.m in Sources */,
+				495747061AFEB0E100E8A172 /* RotationEvent.m in Sources */,
+				495747021AFEB0E100E8A172 /* Motion6DEvent.m in Sources */,
+				495747091AFEB23B00E8A172 /* RingScanTableViewController.m in Sources */,
+				495747031AFEB0E100E8A172 /* OpenSpatialBluetooth.m in Sources */,
+				495747011AFEB0E100E8A172 /* GestureEvent.m in Sources */,
+				495747051AFEB0E100E8A172 /* PointerEvent.m in Sources */,
+				495747041AFEB0E100E8A172 /* OpenSpatialDecoder.m in Sources */,
+				495747001AFEB0E100E8A172 /* ButtonEvent.m in Sources */,
 				495746CE1AFEB0C600E8A172 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +406,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DriveSafeiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -360,6 +417,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DriveSafeiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

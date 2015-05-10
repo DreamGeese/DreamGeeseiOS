@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OpenSpatialBluetooth.h"
+#import <MediaPlayer/MediaPlayer.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <OpenSpatialBluetoothDelegate>
 
+@property OpenSpatialBluetooth *HIDServ;
+@property CBPeripheral *lastNodPeripheral;
+
+-(void) startLoop;
 
 @end
 
